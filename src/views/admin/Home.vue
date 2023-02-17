@@ -1,6 +1,7 @@
 <script>
 import useMainStore from "@/store/main.js"
 import { PlugConnected } from "vue-pancake-icons"
+import ModalEditImage from "@/views/edit_image/ModalEditImage.vue"
 
 export default {
   name: "Home",
@@ -11,6 +12,9 @@ export default {
     const mainStore = useMainStore()
     return { mainStore }
   },
+  components: {
+    ModalEditImage
+  },
   methods: {
     increament() {
       this.mainStore.incrementCounter()
@@ -20,10 +24,6 @@ export default {
 </script>
 
 <template>
-  <v-btn variant="tonal" @click="increament">
-    <PlugConnected /> Button {{ mainStore.counter}}
-  </v-btn>
-
-  <img class="w-full"
-    src="https://statics.pancake.vn/web-media/fb/19/0a/85/ff89227869459fd35b84b5f3537c7718a8a9d1308d686aa246b7d2ec.png" />
+  <a-button type="primary">Edit image</a-button>
+  <ModalEditImage />
 </template>
