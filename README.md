@@ -5,5 +5,5 @@ make app
 
 # plugin
 Tailwind <br />
-Vuetify <br />
+Antdesign Vue <br />
 VuePanacakeIcons ([Demo](https://tieuhoan.dev)) <br />
